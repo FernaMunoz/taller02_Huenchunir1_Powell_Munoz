@@ -53,6 +53,11 @@ Huenchuñir: entregue el metodo reservar().
 muñoz:.
 powell:.
 
+tercer commit:
+Huenchuñir: entregue el metodo resetAll().
+muñoz:.
+powell:.
+
 
 
 
