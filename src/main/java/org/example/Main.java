@@ -6,7 +6,6 @@ public class Main {
     private static final Map<String, List<String>> habitaciones = new LinkedHashMap<>();
     private static final int PRECIOCOMIDA = 30000;
     private static final int PRECIOSINCOMIDA = 45000;
-
     public static void main(String[] args) {
         hotel();
         Scanner sc = new Scanner(System.in);
