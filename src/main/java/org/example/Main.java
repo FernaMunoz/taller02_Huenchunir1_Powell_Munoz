@@ -8,33 +8,36 @@ public class Main {
     private static final Map<String, List<String>> habitaciones = new HashMap<>();
 
     public static void main(String[] args) {
+        hotel();
         Scanner sc = new Scanner(System.in);
         int opcion;
-        do{
+        do {
             Menu();
             opcion = sc.nextInt();
 
-            switch (opcion){
+            switch (opcion) {
                 case 1:
                     System.out.println("Reservar una habitacion");
-                    do{
-                        MenuReserva();
-                        opcion = sc.nextInt();
-                        switch (opcion){
-                            case 1:
-                                //reserva();
-                                //cantidadDias();
-                                //servicioComida();
-                                //
-                        }
-                    }
-                    hotel();
+                    menuReserva(sc);
 
                 case 2:
                     System.out.println("Imprimir boleta");
                     //imprimirBoleta();
-            }
+                    break:
+                case 3:
+                    System.out.println("Limpiar todas las habitaciones");
+                    //resetAll();
+                    break:
 
+                case 4:
+                    System.out.println("saliendo del menu");
+                    break;
+                default:
+                    System.out.println("opcion no valida");
+
+            } while (opcion != 4) ;
+
+            sc.close();
         }
     }
 
@@ -69,12 +72,32 @@ public class Main {
         System.out.println("4, Salir");
         System.out.println("Seleccione la opcion que desea realizar");
     }
-    public static void MenuReserva() {
+
+    public static void menuReserva(Scanner sc) {
         System.out.println("Menu para las reservas");
         System.out.println("1, Reservar");
-        System.out.println("3, confirmar reserva");
-        System.out.println("Seleccione la opcion que desea realizar")
-    }
+        System.out.println("2, confirmar reserva");
+        System.out.println("3, salir");
+        System.out.println("Seleccione la opcion que desea realizar");
+        int opcion = sc.nextInt();
 
+        switch (opcion) {
+            case 1:
+                //reserva();
+                //cantidadDias();
+                //servicioComida();
+                break;
+            case 2:
+                //confirmarReserva
+                //cambiarEstadoHabitacion
+                break;
+            case 3:
+                System.out.println("saliendo del menu de reserva");
+                break;
+            default:
+                System.out.println("opcion no valida");
+    } while (opcion !=3);
+
+    }
 }
 
