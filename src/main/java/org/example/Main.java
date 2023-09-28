@@ -7,9 +7,8 @@ public class Main {
     public static void main(String[] args) {
         hotel();
         reservar();
-        resetAll();
+        // confirmarReserva("Habitación 1"); deberia modificar a habitacion 1
         System.out.println(habitaciones);
-
     }
 
     public static void hotel() {
@@ -29,6 +28,15 @@ public class Main {
         System.out.println("Habitaciones disponibles: " + habitacionesDisponibles);
     }
 
+    public static void confirmarReserva(String habitacion) {
+        if (habitaciones.containsKey(habitacion)) {
+            habitaciones.put(habitacion, Arrays.asList("no disponible", "S.E", "S.E"));
+            System.out.println(habitacion + " ha sido reservada.");
+        } else {
+            System.out.println("La habitación especificada no existe.");
+        }
+    }
+
     public static void resetAll() {
         for (Map.Entry<String, List<String>> entry : habitaciones.entrySet()) {
             entry.setValue(Arrays.asList("disponible", "S.E", "S.E"));
@@ -36,7 +44,6 @@ public class Main {
         System.out.println("Todas las habitaciones han sido restablecidas a 'disponible'");
     }
 }
-
 
 
 
