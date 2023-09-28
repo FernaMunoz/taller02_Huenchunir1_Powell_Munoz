@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5f64975-9d64-480a-ab5b-64c9204d8d83" name="Changes" comment="creacion rama">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f5f64975-9d64-480a-ab5b-64c9204d8d83" name="Changes" comment="segundo commit, cree ahora el metodo reservar()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
@@ -59,11 +58,29 @@
       <option name="project" value="LOCAL" />
       <updated>1695869906382</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="primer commit, crear el map con las 10 habitaciones">
+      <option name="closed" value="true" />
+      <created>1695904492430</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695904492430</updated>
+    </task>
+    <task id="LOCAL-00003" summary="segundo commit, cree ahora el metodo reservar()">
+      <option name="closed" value="true" />
+      <created>1695906102243</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695906102243</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creacion rama" />
-    <option name="LAST_COMMIT_MESSAGE" value="creacion rama" />
+    <MESSAGE value="primer commit, crear el map con las 10 habitaciones" />
+    <MESSAGE value="segundo commit, cree ahora el metodo reservar()" />
+    <option name="LAST_COMMIT_MESSAGE" value="segundo commit, cree ahora el metodo reservar()" />
   </component>
 </project>

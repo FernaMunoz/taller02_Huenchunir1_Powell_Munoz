@@ -7,6 +7,9 @@ public class Main {
     public static void main(String[] args) {
         hotel();
         reservar();
+        resetAll();
+        System.out.println(habitaciones);
+
     }
 
     public static void hotel() {
@@ -24,6 +27,13 @@ public class Main {
             }
         }
         System.out.println("Habitaciones disponibles: " + habitacionesDisponibles);
+    }
+
+    public static void resetAll() {
+        for (Map.Entry<String, List<String>> entry : habitaciones.entrySet()) {
+            entry.setValue(Arrays.asList("disponible", "S.E", "S.E"));
+        }
+        System.out.println("Todas las habitaciones han sido restablecidas a 'disponible'");
     }
 }
 
