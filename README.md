@@ -32,17 +32,17 @@ Para c/u de las anterior, diseñe uno o más métodos que respondan a ese requer
 Establecer que relaciones observa entre los métodos identificados (quien invoca a quien).
 
 
-metodos identificados:
-metodos identificados:
-crearHabitaciones(): debe 
-reservar()
-servicioComida()
-cantidadDias()
-confirmarReserva()
-cambiarEstadoHabitacion()
-imprimirBoleta()
-resetAll()
-menu()
+Métodos identificados:
+crearHabitaciones():  crearemos un map, donde la clave será la habitación y el valor una lista con los datos (estado, servicio Comida, cantidad Días)//son 10 habitaciones 
+reservar(): 
+servicioComida(): en este método se consultará si desea o no agregar el servicio de comida
+cantidadDias(): metodo donde se 
+confirmarReserva():cambiar el valor de la habitación 
+cambiarEstadoHabitacion(): modificar 
+imprimirBoleta(): al imprimir la boleta se libera completamente, actualizar nuestro map con (disponible, –, –)
+resetAll(): limpiar todos los valores de nuestro map, dejando disponible todas las hababitaciones
+menu(): 
+
 
 
 
