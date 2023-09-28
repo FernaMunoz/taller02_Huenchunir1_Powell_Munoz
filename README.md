@@ -74,13 +74,14 @@ Evidencia fotografica (feña)
 ![image](https://github.com/FernaMunoz/taller02_Huenchunir_Powell_Munoz/assets/142464144/bf8e0c96-ab28-4eb9-a670-f4bae15aa0be)
 
 
-
 Posibles errrores y excepciones
 - Al ingresar dias negativos.
 - Anotar numero de habitacion negativo.
 - En las opciones de elegir y que la letra solo sea especifica (ej: en vez de una S mayuscula anotan una s minuscula).
-- 
+- Menu() no anotar la opcion en int en vez de eso anorar en String
 
+
+(Nos falto
 
 
 
