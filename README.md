@@ -46,8 +46,6 @@ cantidadDias(): metodo donde se consulta la cantidad que días que la persona va
 
 confirmarReserva(): confirmar si se va a ocupar la reservar(Feña), en caso de confirmar llama al metodo cambiarEstadoHabitacion.
 
-cambiarEstadoHabitacion(): cambiar el valor de la habitación a (ocupada,--,--), (mjose).
-
 imprimirBoleta(): al imprimir la boleta se libera completamente, actualizar nuestro map con (disponible, –, –) (Mjose).
 
 resetAll(): limpiar todos los valores de nuestro map, dejando disponible todas las habitaciones(Vale).
