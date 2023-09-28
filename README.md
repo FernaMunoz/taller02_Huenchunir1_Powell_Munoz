@@ -32,15 +32,28 @@ Para c/u de las anterior, diseñe uno o más métodos que respondan a ese requer
 Establecer que relaciones observa entre los métodos identificados (quien invoca a quien).
 
 Métodos identificados:
-crearHabitaciones():  crearemos un map, donde la clave será la habitación y el valor una lista c.
-on los datos (estado, servicio Comida, cantidad Días)//son 10 habitaciones (VALE).
-reservar(): método donde se consultara por la disponibilidad de las habitaciones, este metodo, llama al metodo de cantidad de dias y al servicio de comida (Vale).
+crearHabitaciones():  crearemos un map, donde la clave será la habitación y el valor una lista con los datos (estado, servicio Comida, cantidad Días)//son 10 habitaciones
+por defecto el valor sera (disponible, S.E, S.E )(vale).
+exepciones: este método se tiene que llamar por defecto por lo cual no tiene excepciones
+
+reservar(): método donde se consultara por la disponibilidad de las habitaciones.
+este método obtiene el valor de cada habitacion y entrega las que destro de su valor, el cual es una lista, tenga el "disponible" (Vale).
+exepciones: al no tener interaccion con el usuario tampoco identifico excepciones
+
 servicioComida(): en este método se consultará si desea o no agregar el servicio de comida (Feña).
+
 cantidadDias(): metodo donde se consulta la cantidad que días que la persona va a estar.(Feña).
+
 confirmarReserva(): confirmar si se va a ocupar la reservar(Feña), en caso de confirmar llama al metodo cambiarEstadoHabitacion.
+
 cambiarEstadoHabitacion(): cambiar el valor de la habitación a (ocupada,--,--), (mjose).
+
 imprimirBoleta(): al imprimir la boleta se libera completamente, actualizar nuestro map con (disponible, –, –) (Mjose).
+
 resetAll(): limpiar todos los valores de nuestro map, dejando disponible todas las habitaciones(Vale).
+exepciones: al no tener interaccion con el usuario tampoco identifico excepciones, ya que este se llama en el menu 
+
+
 menu(): El menu mostrará las opciones de reservar(), imprimir() y resetAll(). (mjose).
 
 primer commit: 
