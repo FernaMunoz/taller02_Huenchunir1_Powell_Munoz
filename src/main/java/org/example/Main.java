@@ -47,7 +47,6 @@ public class Main {
             habitaciones.put("Habitación " + i, Arrays.asList("disponible", "S.E", "0")); // S.E, es sin especificar el cual dejamos por defecto
         }
     }
-
     public static void reservar() {
         List<String> habitacionesDisponibles = new ArrayList<>();
         for (Map.Entry<String, List<String>> entry : habitaciones.entrySet()) {
