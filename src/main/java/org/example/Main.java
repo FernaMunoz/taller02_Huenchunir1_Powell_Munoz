@@ -1,6 +1,6 @@
 package org.example;
 import java.util.Scanner;
-import java.util.*; 
+import java.util.*;
 public class Main {
     private static final int PRECIOCOMIDA = 30000;
     private static final int PRECIOSINCOMIDA = 45000;
@@ -11,11 +11,11 @@ public class Main {
         hotel();
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese el número de habitación: ");
-        int numeroHabitacion = scanner.nextInt();
-        scanner.nextLine(); // Consumir la nueva línea pendiente
-        servicioComida(numeroHabitacion, scanner);
-        cantidadDias(numeroHabitacion, scanner);
-        confirmarReserva(numeroHabitacion, scanner);
+        int numhabitacion = scanner.nextInt();
+        scanner.nextLine();
+        servicioComida(numhabitacion, scanner);
+        cantidadDias(numhabitacion, scanner);
+        confirmarReserva(numhabitacion, scanner);
         scanner.close();
     }
 
@@ -30,7 +30,7 @@ public class Main {
 
     public static void servicioComida(int numhabitacion, Scanner scanner){
         System.out.print("¿Desea agregar servicio de alimentacion en la habitacion, ingrese S/N");
-        //
+        scanner.nextLine();
         String respuesta = scanner.nextLine();
         if (respuesta.equals("S")){
             List<String> estadoHabitacion = habitaciones.get("Habitación " + numhabitacion);
@@ -51,8 +51,9 @@ public class Main {
         int costoDias = estadoHabitacion.get(1).equals("OA") ? Dias * PRECIOCOMIDA : Dias * PRECIOSINCOMIDA;
         System.out.print("El costo total de la habitacion es de $ " + costoDias);
     }
-    public void confirmarReserva(int numhabitacion, Scanner scanner) {
+    public static void confirmarReserva(int numhabitacion, Scanner scanner) {
         System.out.print("Ya esta casi listo: ");
+        scanner.nextLine();
         System.out.print("¿Desea confirmar la reserva?, ingrese (S/N): ");
         String respuesta = scanner.nextLine();
 
