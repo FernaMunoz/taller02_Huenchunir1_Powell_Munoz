@@ -30,3 +30,21 @@ i. Antes de programar (pensar) ---> diseñar!!!
 Identifique las principales secciones de la solución.
 Para c/u de las anterior, diseñe uno o más métodos que respondan a ese requerimiento (tipo, nombres y parámetros).
 Establecer que relaciones observa entre los métodos identificados (quien invoca a quien).
+
+
+metodos identificados:
+metodos identificados:
+crearHabitaciones(): debe 
+reservar()
+servicioComida()
+cantidadDias()
+confirmarReserva()
+cambiarEstadoHabitacion()
+imprimirBoleta()
+resetAll()
+menu()
+
+
+
+
+
