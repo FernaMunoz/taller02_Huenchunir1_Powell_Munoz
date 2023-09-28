@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.*;
 
 public class Main {
-    private static final Map<String, List<String>> habitaciones = new HashMap<>();
+    private static final Map<String, List<String>> habitaciones = new LinkedHashMap<>();
     private static final int PRECIOCOMIDA = 30000;
     private static final int PRECIOSINCOMIDA = 45000;
 
@@ -21,8 +21,12 @@ public class Main {
                     menuReserva(sc);
                     break;
                 case 2:
-                    System.out.println("Imprimir boleta");
-                    // imprimirBoleta();
+                    System.out.print("Ingrese el número de habitación para imprimir la boleta: ");
+                    sc.nextLine();
+                    String numHabitacion = "Habitación " + sc.nextInt();
+                    sc.nextLine();
+                    String detalles = habitaciones.get(numHabitacion).get(1) + habitaciones.get(numHabitacion).get(2);
+                    imprimirBoleta(numHabitacion, detalles);
                     break;
                 case 3:
                     System.out.println("Limpiar todas las habitaciones");
@@ -54,14 +58,19 @@ public class Main {
         }
         System.out.println("Habitaciones disponibles: " + habitacionesDisponibles);
     }
-
-    public static void resetAll() {
-        for (Map.Entry<String, List<String>> entry : habitaciones.entrySet()) {
-            entry.setValue(Arrays.asList("disponible", "S.E", "0"));
+    public static void cantidadDias(Scanner sc) {
+        System.out.print("Ingrese el número de habitación: ");
+        int numHabitacion = sc.nextInt();
+        if (habitaciones.containsKey("Habitación " + numHabitacion)) {
+            System.out.print("¿Cuantos días desea reservar?, ingrese la cantidad: ");
+            int dias = sc.nextInt();
+            List<String> estadoHabitacion = habitaciones.get("Habitación " + numHabitacion);
+            int costoDias = estadoHabitacion.get(1).equals("OA") ? dias * PRECIOCOMIDA : dias * PRECIOSINCOMIDA;
+            System.out.println("El costo total de la habitación es de $ " + costoDias);
+        } else {
+            System.out.println("Número de habitación inválido.");
         }
-        System.out.println("Todas las habitaciones han sido restablecidas a 'disponible'");
     }
-
     public static void servicioComida(Scanner sc) {
         System.out.print("¿Desea agregar servicio de alimentación en la habitación (S/N)?: ");
         String respuesta = sc.next();
@@ -79,6 +88,11 @@ public class Main {
             System.out.println("No se ha agregado servicio de alimentación.");
         }
     }
+
+
+
+
+
     public static void confirmarReserva(Scanner sc) {
         System.out.print("Ingrese el número de habitación a confirmar: ");
         int numHabitacion = sc.nextInt();
@@ -103,18 +117,27 @@ public class Main {
         }
     }
 
-    public static void cantidadDias(Scanner sc) {
-        System.out.print("Ingrese el número de habitación: ");
-        int numHabitacion = sc.nextInt();
-        if (habitaciones.containsKey("Habitación " + numHabitacion)) {
-            System.out.print("¿Cuantos días desea reservar?, ingrese la cantidad: ");
-            int dias = sc.nextInt();
-            List<String> estadoHabitacion = habitaciones.get("Habitación " + numHabitacion);
-            int costoDias = estadoHabitacion.get(1).equals("OA") ? dias * PRECIOCOMIDA : dias * PRECIOSINCOMIDA;
-            System.out.println("El costo total de la habitación es de $ " + costoDias);
+
+    public static void imprimirBoleta(String habitacion, String detalles) {
+        if (habitaciones.containsKey(habitacion)) {
+            int noches = Integer.parseInt(detalles.substring(2));
+            int precioPorNoche = detalles.startsWith("OA") ? 45000 : 30000;
+            int total = noches * precioPorNoche;
+            System.out.println("Boleta para " + habitacion + ":");
+            System.out.println("Noches: " + noches);
+            System.out.println("Precio por noche: $" + precioPorNoche);
+            System.out.println("Total: $" + total);
+            habitaciones.put(habitacion, Arrays.asList("disponible", "S.E", "S.E"));
+            System.out.println(habitacion + " ha sido liberada.");
         } else {
-            System.out.println("Número de habitación inválido.");
+            System.out.println("La habitación especificada no existe.");
         }
+    }
+    public static void resetAll() {
+        for (Map.Entry<String, List<String>> entry : habitaciones.entrySet()) {
+            entry.setValue(Arrays.asList("disponible", "S.E", "0"));
+        }
+        System.out.println("Todas las habitaciones han sido restablecidas a 'disponible'");
     }
     public static void Menu() {
         System.out.println("MENU");
@@ -143,7 +166,6 @@ public class Main {
                     break;
                 case 2:
                     confirmarReserva(sc);
-                    // cambiarEstadoHabitacion
                     break;
                 case 3:
                     System.out.println("Saliendo del menú de reserva");
