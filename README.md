@@ -81,7 +81,8 @@ Posibles errrores y excepciones
 - Menu() no anotar la opcion en int en vez de eso anorar en String
 
 
-(Nos falto
+relexion:
+no falto tiempo para comprobar errores coon el codigo final, ya que solo alcanzamos a hacer merge con nuestros codigos de los metodos que nos designamos anteriormente
 
 
 
