@@ -4,6 +4,8 @@ import java.util.*;
 
 public class Main {
     private static final Map<String, List<String>> habitaciones = new HashMap<>();
+    private static final int PRECIOCOMIDA = 30000;
+    private static final int PRECIOSINCOMIDA = 45000;
 
     public static void main(String[] args) {
         hotel();
@@ -59,6 +61,41 @@ public class Main {
         }
         System.out.println("Todas las habitaciones han sido restablecidas a 'disponible'");
     }
+    public static void servicioComida(int numhabitacion, Scanner sc){
+        System.out.print("¿Desea agregar servicio de alimentacion en la habitacion, ingrese S/N");
+        String respuesta = sc.nextLine();
+        if (respuesta.equals("S")){
+            List<String> estadoHabitacion = habitaciones.get("Habitación " + numhabitacion);
+            estadoHabitacion.set(1, "OA");
+            System.out.print("Habitacion con comida asignada");
+        } else {
+            List<String> estadoHabitacion = habitaciones.get("Habitación " + numhabitacion);
+            estadoHabitacion.set(1, "OS");
+        }
+
+    }
+
+    public static void cantidadDias(int numhabitacion,Scanner sc){
+        System.out.print("¿Cuantos dias desea reservar?, ingrese la cantidad: ");
+        int Dias = sc.nextInt();
+        sc.nextLine();
+        List<String> estadoHabitacion = habitaciones.get("Habitación " + numhabitacion);
+        int costoDias = estadoHabitacion.get(1).equals("OA") ? Dias * PRECIOCOMIDA : Dias * PRECIOSINCOMIDA;
+        System.out.print("El costo total de la habitacion es de $ " + costoDias);
+    }
+    public void confirmarReserva(int numhabitacion, Scanner sc) {
+        System.out.print("Ya esta casi listo: ");
+        System.out.print("¿Desea confirmar la reserva?, ingrese (S/N): ");
+        String respuesta = sc.nextLine();
+
+        if (respuesta.equals("S")) {
+            List<String> estadoHabitacion = habitaciones.get("Habitación " + numhabitacion);
+            estadoHabitacion.set(0, "reservada");
+            System.out.println("Reserva confirmada.");
+        } else {
+            System.out.println("Reserva cancelada.");
+        }
+    }
 
     public static void Menu() {
         System.out.println("MENU");
@@ -82,11 +119,11 @@ public class Main {
             switch (opcion) {
                 case 1:
                     reservar();
-                    // cantidadDias();
-                    // servicioComida();
+                    cantidadDias(sc);
+                    servicioComida(sc);
                     break;
                 case 2:
-                    // confirmarReserva
+                    confirmarReserva(sc);
                     // cambiarEstadoHabitacion
                     break;
                 case 3:
