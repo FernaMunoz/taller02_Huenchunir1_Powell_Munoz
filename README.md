@@ -56,21 +56,24 @@ menu(): El menu mostrará las opciones de reservar(), imprimir() y resetAll(). (
 
 primer commit: 
 Huenchuñir: entregue el metodo crearHabitaciones.
-muñoz:.
+muñoz:.entrega metodos servicioComida()
 powell:.
 
 segundo commit:
 Huenchuñir: entregue el metodo reservar().
-muñoz:.
+muñoz: entrega metodos servicioComida(), confirmarReserva() y cantidadDias() actualizado
 powell:.
 
 tercer commit:
 Huenchuñir: entregue el metodo resetAll().
-muñoz:.
+muñoz: entrega metodos servicioComida(), confirmarReserva() y cantidadDias() arreglado debido a mala sintaxis
 powell:.
 
 
-
+posibles errrores y excepciones
+- Al ingresar dias negativos
+- Anotar numero de habitacion negativo
+- En las opciones de elegir y que la letra solo sea especifica (ej: en vez de una S mayuscula anotan una s minuscula
 
 
 
