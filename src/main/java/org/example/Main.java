@@ -3,9 +3,10 @@ package org.example;
 import java.util.*;
 
 public class Main {
-    private static final Map<String, List<String>> habitaciones = new HashMap<>();
+    private static final Map<String, List<String>> habitaciones = new LinkedHashMap<>();
     public static void main(String[] args) {
         hotel();
+        reservar();
     }
 
     public static void hotel() {
@@ -14,6 +15,18 @@ public class Main {
             System.out.println(habitaciones);
         }
     }
+
+    public static void reservar() {
+        List<String> habitacionesDisponibles = new ArrayList<>();
+        for (Map.Entry<String, List<String>> entry : habitaciones.entrySet()) {
+            if ("disponible".equals(entry.getValue().get(0))) {
+                habitacionesDisponibles.add(entry.getKey());
+            }
+        }
+        System.out.println("Habitaciones disponibles: " + habitacionesDisponibles);
+    }
 }
+
+
 
 
