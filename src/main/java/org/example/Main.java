@@ -29,13 +29,12 @@ public class Main {
 
 
     public static void servicioComida(int numhabitacion, Scanner scanner){
-        System.out.print("¿Desea agregar servicio de alimentacion en la habitacion, ingrese S/N");
-        scanner.nextLine();
+        System.out.print("¿Desea agregar servicio de alimentacion en la habitacion, ingrese S/N ");
         String respuesta = scanner.nextLine();
         if (respuesta.equals("S")){
             List<String> estadoHabitacion = habitaciones.get("Habitación " + numhabitacion);
             estadoHabitacion.set(1, "OA");
-            System.out.print("Habitacion con comida asignada");
+            System.out.print("Habitacion con comida asignada/N ");
         } else {
             List<String> estadoHabitacion = habitaciones.get("Habitación " + numhabitacion);
             estadoHabitacion.set(1, "OS");
@@ -43,18 +42,22 @@ public class Main {
 
     }
 
-    public static void cantidadDias(int numhabitacion,Scanner scanner){
-        System.out.print("¿Cuantos dias desea reservar?, ingrese la cantidad: ");
+    public static void cantidadDias(int numhabitacion, Scanner scanner){
+        System.out.println("¿Cuantos dias desea reservar?, ingrese la cantidad: ");
         int Dias = scanner.nextInt();
         scanner.nextLine();
         List<String> estadoHabitacion = habitaciones.get("Habitación " + numhabitacion);
-        int costoDias = estadoHabitacion.get(1).equals("OA") ? Dias * PRECIOCOMIDA : Dias * PRECIOSINCOMIDA;
-        System.out.print("El costo total de la habitacion es de $ " + costoDias);
+        if (estadoHabitacion.get(1).equals("OA")){
+            int costoDias =  Dias * PRECIOCOMIDA;
+            System.out.print("El costo total de la habitacion es de $ " + costoDias);
+        } else {
+            int costoDias = Dias * PRECIOSINCOMIDA;
+            System.out.print("El costo total de la habitacion es de $ " + costoDias);
+        }
+
     }
     public static void confirmarReserva(int numhabitacion, Scanner scanner) {
-        System.out.print("Ya esta casi listo: ");
-        scanner.nextLine();
-        System.out.print("¿Desea confirmar la reserva?, ingrese (S/N): ");
+        System.out.print("¿Desea confirmar la reserva?, ingrese S/N: ");
         String respuesta = scanner.nextLine();
 
         if (respuesta.equals("S")) {
