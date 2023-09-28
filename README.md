@@ -43,7 +43,8 @@ imprimirBoleta(): al imprimir la boleta se libera completamente, actualizar nues
 resetAll(): limpiar todos los valores de nuestro map, dejando disponible todas las habitaciones(Vale).
 menu(): El menu mostrará las opciones de reservar(), imprimir() y resetAll(). (mjose).
 
-
+primer commit: 
+Huenchuñir: entregue el metodo crearHabitaciones 
 
 
 
