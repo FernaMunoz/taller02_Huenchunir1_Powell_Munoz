@@ -1,6 +1,6 @@
 package org.example;
 import java.util.Scanner;
-import java.util.*;
+import java.util.*; 
 public class Main {
     private static final int PRECIOCOMIDA = 30000;
     private static final int PRECIOSINCOMIDA = 45000;
