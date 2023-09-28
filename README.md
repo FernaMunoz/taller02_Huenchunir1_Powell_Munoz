@@ -44,7 +44,7 @@ resetAll(): limpiar todos los valores de nuestro map, dejando disponible todas l
 menu(): El menu mostrará las opciones de reservar(), imprimir() y resetAll(). (mjose).
 
 primer commit: 
-Huenchuñir: entregue el metodo crearHabitaciones 
+Huenchuñir: entregue el metodo crearHabitaciones.
 
 
 
