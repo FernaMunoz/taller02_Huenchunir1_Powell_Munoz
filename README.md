@@ -45,6 +45,14 @@ menu(): El menu mostrará las opciones de reservar(), imprimir() y resetAll(). (
 
 primer commit: 
 Huenchuñir: entregue el metodo crearHabitaciones.
+muñoz:.
+powell:.
+
+segundo commit:
+Huenchuñir: entregue el metodo reservar().
+muñoz:.
+powell:.
+
 
 
 
